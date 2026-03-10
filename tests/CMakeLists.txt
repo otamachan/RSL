@@ -23,7 +23,7 @@ target_link_libraries(test-rsl PRIVATE
     Catch2::Catch2WithMain
     range-v3::range-v3
 )
-catch_discover_tests(test-rsl)
+catch_discover_tests(test-rsl DISCOVERY_MODE PRE_TEST)
 
 # Test install interface
 add_test(NAME "Install RSL" COMMAND
